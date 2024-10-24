@@ -1,11 +1,9 @@
 import { AnimatedGradientTextDemo } from "@/components/badge";
 import { BentoGridSecondDemo } from "@/components/bento";
-import Hike from "@/components/hike";
 import { CarouselDemo } from "@/components/moveing-cards";
 import { NavigationMenuDemo } from "@/components/navbar";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import Ripple from "@/components/ui/ripple";
-import TextRevealByWord from "@/components/ui/text-reveal";
 import Wave from "@/components/wave";
 import { WaveSVG } from "@/components/wave2";
 
@@ -62,7 +60,7 @@ export default function Home() {
             also add your certificates and achievements along the way.
           </li>
           <li className="text-md text-gray-400 mt-10 ml-20">
-            When it's time to apply for a job, our AI will intelligently curate
+            When its time to apply for a job, our AI will intelligently curate
             the best experiences tailored for that position based on your data.
             Plus, it will provide you with a summary and key pointers to help
             you prepare for your interview.
