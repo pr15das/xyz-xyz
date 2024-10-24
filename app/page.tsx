@@ -1,101 +1,83 @@
-import Image from "next/image";
+import { AnimatedGradientTextDemo } from "@/components/badge";
+import { BentoGridSecondDemo } from "@/components/bento";
+import Hike from "@/components/hike";
+import { CarouselDemo } from "@/components/moveing-cards";
+import { NavigationMenuDemo } from "@/components/navbar";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import Ripple from "@/components/ui/ripple";
+import TextRevealByWord from "@/components/ui/text-reveal";
+import Wave from "@/components/wave";
+import { WaveSVG } from "@/components/wave2";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <div className=" flex justify-between sticky top-0 z-50 backdrop-blur-xl bg-white/20 py-3">
+        <div className="flex ml-10 border-2 rounded-lg ">
+          <NavigationMenuDemo />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="flex justify-end mr-10 gap-3">
+          <button className="border text-black px-6 py-2 rounded-lg text-sm">
+            Sign Up
+          </button>
+          <button className="bg-black text-white px-6 py-2 rounded-lg text-sm">
+            Login
+          </button>
+        </div>
+      </div>
+      <div className="relative flex h-[600px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background mt-[105px]">
+        <AnimatedGradientTextDemo />
+        <p className="z-10 whitespace-pre-wrap text-center text-7xl font-bold tracking-tighter text-black">
+          Journal Your Career
+        </p>
+        <p className="text-md text-gray-400 mt-3 text-center ml-10 mr-9">
+          Let xyz be the guide to your dream job Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. <br />
+          Earum tempora unde optio est veniam reprehenderit, inventore animi
+          fuga laborum
+        </p>
+        <RainbowButton className="mt-8">Get started</RainbowButton>
+        <Ripple />
+      </div>
+      <div className="flex flex-col gap-3 items-center justify-center bg-black text-white rounded-lg"></div>
+      {/* <div className="flex justify-between">
+        <Hike />
+      </div> */}
+      <Wave />
+
+      <div className="flex justify-between gap-60 bg-black text-white">
+        <div className="mb-12">
+          <p className="text-7xl font-bold ml-20 mt-16 tracking-tighter">
+            Now Connect all your experiences in one go!
+          </p>
+
+          <li className="text-md text-gray-400 mt-11 ml-20 ">
+            XYZ is the perfect companion for your career needs. Simply upload
+            your existing resume and start journaling your daily activities and
+            experiences.
+          </li>
+          <li className="text-md text-gray-400 mt-10 ml-20">
+            As you engage in various opportunities—such as internships,
+            activities, and seminars—record your insights and learnings. You can
+            also add your certificates and achievements along the way.
+          </li>
+          <li className="text-md text-gray-400 mt-10 ml-20">
+            When it's time to apply for a job, our AI will intelligently curate
+            the best experiences tailored for that position based on your data.
+            Plus, it will provide you with a summary and key pointers to help
+            you prepare for your interview.
+          </li>
+        </div>
+        <div className="mr-20 mt-20">
+          <CarouselDemo />
+        </div>
+      </div>
+      <WaveSVG />
+      <div>
+        <p className="text-center text-bold tracking-tighter text-6xl mt-10 mb-10">Top Features</p>
+        <BentoGridSecondDemo/>
+      </div>
+      <div className="mt-96 mb-20 text-center text-gray-400">Design & Build by Priyangshu and Avhi</div>
+    </>
   );
 }
