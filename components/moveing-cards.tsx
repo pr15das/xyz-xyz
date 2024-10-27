@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "./ui/card";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function CarouselDemo() {
   const images = [1, 2, 3]; // Image numbers
@@ -29,7 +30,7 @@ export function CarouselDemo() {
             <div className="p-0">
               <Card className="h-[570px] w-[370px]">
                 <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <img
+                  <Image
                     src={`/images/${image}.webp`} // Adjust the extension if needed
                     alt={`Image ${image}`}
                     className="object-cover w-[1500px] h-[520px] rounded-lg"
