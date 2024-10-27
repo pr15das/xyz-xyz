@@ -1,7 +1,10 @@
+import { AccordionDemo } from "@/components/accordion";
 import { AnimatedGradientTextDemo } from "@/components/badge";
 import { BentoGridSecondDemo } from "@/components/bento";
 import { CarouselDemo } from "@/components/moveing-cards";
 import { NavigationMenuDemo } from "@/components/navbar";
+import { Pricing } from "@/components/pricing";
+import NumberTicker from "@/components/ui/number-ticker";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import Ripple from "@/components/ui/ripple";
 import Wave from "@/components/wave";
@@ -10,27 +13,14 @@ import { WaveSVG } from "@/components/wave2";
 export default function Home() {
   return (
     <>
-      <div className=" flex justify-between sticky top-0 z-50 backdrop-blur-xl bg-white/20 py-3">
-        <div className="flex ml-10 border-2 rounded-lg ">
-          <NavigationMenuDemo />
-        </div>
-        <div className="flex justify-end mr-10 gap-3">
-          <button className="border text-black px-6 py-2 rounded-lg text-sm">
-            Sign Up
-          </button>
-          <button className="bg-black text-white px-6 py-2 rounded-lg text-sm">
-            Login
-          </button>
-        </div>
-      </div>
       <div className="relative flex h-[600px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background mt-[105px]">
         <AnimatedGradientTextDemo />
         <p className="z-10 whitespace-pre-wrap text-center text-7xl font-bold tracking-tighter text-black">
           Journal Your Career
         </p>
         <p className="text-md text-gray-400 mt-3 text-center ml-10 mr-9">
-          Let xyz be the guide to your dream job Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. <br />
+          Let Skilltreck be the guide to your dream job Lorem ipsum dolor sit
+          amet consectetur, adipisicing elit. <br />
           Earum tempora unde optio est veniam reprehenderit, inventore animi
           fuga laborum
         </p>
@@ -50,9 +40,9 @@ export default function Home() {
           </p>
 
           <li className="text-md text-gray-400 mt-11 ml-20 ">
-            XYZ is the perfect companion for your career needs. Simply upload
-            your existing resume and start journaling your daily activities and
-            experiences.
+            Skilltreck is the perfect companion for your career needs. Simply
+            upload your existing resume and start journaling your daily
+            activities and experiences.
           </li>
           <li className="text-md text-gray-400 mt-10 ml-20">
             As you engage in various opportunities—such as internships,
@@ -72,10 +62,25 @@ export default function Home() {
       </div>
       <WaveSVG />
       <div>
-        <p className="text-center text-bold tracking-tighter text-6xl mt-10 mb-10">Top Features</p>
-        <BentoGridSecondDemo/>
+        <p className="text-5xl font-semibold text-center flex gap-2 justify-center mb-16 mt-20">
+          Top Features
+        </p>
+        <BentoGridSecondDemo />
       </div>
-      <div className="mt-96 mb-20 text-center text-gray-400">Design & Build by Priyangshu and Avhi</div>
+      <div id="pricing">
+        <Pricing />
+      </div>
+      <p className="text-6xl font-semibold text-center flex gap-2 justify-center mb-16 mt-20">
+        {" "}
+        FAQs
+      </p>
+
+      <div className="ml-60 mr-60">
+        <AccordionDemo />
+      </div>
+      <div className="mt-48 mb-20 text-center text-gray-400">
+        Design & Build by Priyangshu and Avhi
+      </div>
     </>
   );
 }

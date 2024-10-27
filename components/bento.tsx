@@ -30,30 +30,30 @@ const Skeleton = () => (
 
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
+    title: "Smart Experience Curator",
+    description: "The inbuilt AI analyzes your entries to curate relevant experiences tailored for specific job applications and automatically adjusts resume content based on job descriptions",
     header: <Skeleton />,
     className: "md:col-span-2",
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
+    title: "Experience Suggestion Engine",
+    description: "Get suggestions for skills to develop and opportunities to explore based on your career aspirations",
     header: <Skeleton />,
     className: "md:col-span-1",
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "Dynamic Career Journal",
+    description: "Keep a daily journal of your activities, experiences, and insights. Record internships, seminars, volunteer work, and achievements easily.",
     header: <Skeleton />,
     className: "md:col-span-1",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Power of Communication",
+    title: "Interview Prep Dashboard",
     description:
-      "Understand the impact of effective communication in our lives.",
+      "AI generates summaries, key pointers, and potential interview questions based on your past experiences. Provides tips and strtegies to ace upcoming interviews",
     header: <Skeleton />,
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
