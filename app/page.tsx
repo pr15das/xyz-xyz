@@ -7,6 +7,7 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 import Ripple from "@/components/ui/ripple";
 import Wave from "@/components/wave";
 import { WaveSVG } from "@/components/wave2";
+import Link from "next/link"; 
 
 export default function Home() {
   return (
@@ -22,13 +23,15 @@ export default function Home() {
           Earum tempora unde optio est veniam reprehenderit, inventore animi
           fuga laborum
         </p>
-        <RainbowButton className="mt-8">Get started</RainbowButton>
+        
+        
+        <Link href="/Dashboard">
+          <RainbowButton className="mt-8"> Get started </RainbowButton>
+        </Link>
+
         <Ripple />
       </div>
       <div className="flex flex-col gap-3 items-center justify-center bg-black text-white rounded-lg"></div>
-      {/* <div className="flex justify-between">
-        <Hike />
-      </div> */}
       <Wave />
 
       <div className="flex justify-between gap-60 bg-black text-white">
@@ -48,7 +51,7 @@ export default function Home() {
             also add your certificates and achievements along the way.
           </li>
           <li className="text-md text-gray-400 mt-10 ml-20">
-            When its time to apply for a job, our AI will intelligently curate
+            When it is time to apply for a job, our AI will intelligently curate
             the best experiences tailored for that position based on your data.
             Plus, it will provide you with a summary and key pointers to help
             you prepare for your interview.
@@ -69,7 +72,6 @@ export default function Home() {
         <Pricing />
       </div>
       <p className="text-6xl font-semibold text-center flex gap-2 justify-center mb-16 mt-20">
-        {" "}
         FAQs
       </p>
 

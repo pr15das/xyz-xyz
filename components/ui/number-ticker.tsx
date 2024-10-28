@@ -33,6 +33,8 @@ export default function NumberTicker({
       }, delay * 1000);
     }
   }, [motionValue, isInView, delay, value, direction]);
+  
+
 
   useEffect(
     () =>

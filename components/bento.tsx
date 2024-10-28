@@ -6,6 +6,7 @@ import {
   IconTableColumn,
 } from "@tabler/icons-react";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
+import Image from "next/image";
 
 export function BentoGridSecondDemo() {
   return (
@@ -23,38 +24,61 @@ export function BentoGridSecondDemo() {
     </BentoGrid>
   );
 }
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
-);
-
 
 const items = [
   {
     title: "Smart Experience Curator",
-    description: "The inbuilt AI analyzes your entries to curate relevant experiences tailored for specific job applications and automatically adjusts resume content based on job descriptions",
-    header: <Skeleton />,
+    description:
+      "The inbuilt AI analyzes your entries to curate relevant experiences tailored for specific job applications and automatically adjusts resume content based on job descriptions.",
+    header: (
+      <Image
+        src="https://ibb.co/5xRqqmT"
+        alt="Smart Experience Curator"
+        className="w-full h-full object-cover rounded-xl"
+      />
+    ),
     className: "md:col-span-2",
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Experience Suggestion Engine",
-    description: "Get suggestions for skills to develop and opportunities to explore based on your career aspirations",
-    header: <Skeleton />,
+    description:
+      "Get suggestions for skills to develop and opportunities to explore based on your career aspirations.",
+    header: (
+      <Image
+        src="https://via.placeholder.com/400x200"
+        alt="Experience Suggestion Engine"
+        className="w-full h-full object-cover rounded-xl"
+      />
+    ),
     className: "md:col-span-1",
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Dynamic Career Journal",
-    description: "Keep a daily journal of your activities, experiences, and insights. Record internships, seminars, volunteer work, and achievements easily.",
-    header: <Skeleton />,
+    description:
+      "Keep a daily journal of your activities, experiences, and insights. Record internships, seminars, volunteer work, and achievements easily.",
+    header: (
+      <Image
+        src="https://via.placeholder.com/400x200"
+        alt="Dynamic Career Journal"
+        className="w-full h-full object-cover rounded-xl"
+      />
+    ),
     className: "md:col-span-1",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Interview Prep Dashboard",
     description:
-      "AI generates summaries, key pointers, and potential interview questions based on your past experiences. Provides tips and strtegies to ace upcoming interviews",
-    header: <Skeleton />,
+      "AI generates summaries, key pointers, and potential interview questions based on your past experiences. Provides tips and strategies to ace upcoming interviews.",
+    header: (
+      <Image
+        src="https://via.placeholder.com/800x200"
+        alt="Interview Prep Dashboard"
+        className="w-full h-full object-cover rounded-xl"
+      />
+    ),
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
