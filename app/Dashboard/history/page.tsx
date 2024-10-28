@@ -55,12 +55,12 @@ const History = () => {
   return (
     <div className="p-4 flex">
       {/* Left Section for Entries */}
-      <div className="w-full md:w-3/4 space-y-6">
+      <div className="w-full">
         <h1 className="text-3xl font-bold mb-4">Your History</h1>
         <p className="mb-6">In this section, you will find all the entries that you have made.</p>
         
         {entries.map((entry) => (
-          <div key={entry.id} className="p-6 border border-dotted border-gray-400 rounded-lg shadow-md mb-4">
+          <div key={entry.id} className="p-6 border border-dotted border-gray-400 rounded-lg shadow-md mb-4 w-full">
             <h2 className="text-2xl font-semibold mb-4">Entry for {entry.date}</h2>
             
             {/* Daily Journal Section */}
@@ -87,15 +87,18 @@ const History = () => {
       </div>
 
       {/* Right Section for Fixed Calendar */}
-      <div className="hidden md:block fixed right-4 top-16 w-1/5.5 mt-44 mr-16 ">
-      <div className="border-dashed border-2 rounded-md"><p className="tracking-tighter text-center mb-1 mt-1">Pick a Date</p></div>
-        <Calendar
-          mode="single"
-          selected={date}
-          onSelect={handleSelectDate}
-          className="w-full rounded-md border"
-        />
-      </div>
+      <div className="hidden md:block fixed right-4 top-16 w-[300px]  mt-44 mr-48 ">
+  <div className="border-dashed border-2 rounded-xl p-2 border-black ">
+    <p className="tracking-tighter text-center mb-2 mt-1 text-lg ">Pick a Date</p>
+    <Calendar
+      mode="single"
+      selected={date}
+      onSelect={handleSelectDate}
+      className="w-[280px] h-[320px] rounded-md border"
+    />
+  </div>
+</div>
+
     </div>
   );
 };
